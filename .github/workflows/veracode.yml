@@ -15,7 +15,7 @@ jobs:
 
     - name: pull dependencies
       run: | 
-        mvn clean package -Dcheckstyle.skip=true -e -DskipTests -DskipITs -Dmaven.test.skip=true --fail-fast -Denforcer.skip=true
+        mvn clean install -PautoInstallSinglePackage
     
     - name: package components for analysis
       run: |
